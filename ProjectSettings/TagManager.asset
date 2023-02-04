@@ -12,6 +12,7 @@ TagManager:
   - Object5
   - pnlWinGame
   - Logic
+  - ColliderRoot
   layers:
   - Default
   - TransparentFX

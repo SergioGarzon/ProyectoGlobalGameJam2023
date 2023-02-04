@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
         transform.position = playerPosition;
 
         StartCoroutine(MovementGravity());
+
+        Debug.Log("Eje x: " + transform.position.x + ", eje y: " + transform.position.y);
     }
     
     IEnumerator MovementGravity()

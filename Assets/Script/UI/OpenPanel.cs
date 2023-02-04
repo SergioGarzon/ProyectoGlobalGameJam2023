@@ -25,5 +25,9 @@ public class OpenPanel : MonoBehaviour
         panel3.SetActive(false);
     }
 
+    public void returnGamePanel() {
+        Time.timeScale = 1;
+    }
+
 
 }

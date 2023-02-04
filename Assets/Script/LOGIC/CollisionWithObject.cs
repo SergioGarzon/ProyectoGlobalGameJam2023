@@ -11,6 +11,8 @@ public class CollisionWithObject : MonoBehaviour
 
     private SliderLife sldLife;
 
+    private SpawnObjectRoot spawnObjectRoot;
+
     private void Start()
     {
         //pnlWin = gameObject.GetComponent<OpenPanel>();
@@ -18,6 +20,8 @@ public class CollisionWithObject : MonoBehaviour
         objectLogic = GameObject.Find("Logic");
 
         sldLife = objectLogic.GetComponent<SliderLife>();
+
+        spawnObjectRoot = objectLogic.GetComponent<SpawnObjectRoot>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -61,6 +65,11 @@ public class CollisionWithObject : MonoBehaviour
             sldLife.updateLife(-50);
             sldLife.ColorSlider();
             Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "ColliderRoot")
+        {
+            //spawnObjectRoot.SpawnObjectRootScene(other.gameObject);
         }
 
 

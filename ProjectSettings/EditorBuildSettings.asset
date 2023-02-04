@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/VideoPresentation.unity
+    guid: 2b79f55704dad5e49a996259a1886615
+  - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 357aabf7d127d0c4692c4c111ae50caa
   m_configObjects: {}

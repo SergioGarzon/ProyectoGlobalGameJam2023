@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e605496db388da5428e536656b83f5f1, type: 3}
   m_Name: LifeData
   m_EditorClassIdentifier: 
-  life: 80
+  life: 100
