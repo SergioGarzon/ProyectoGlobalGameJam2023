@@ -69,7 +69,7 @@ public class CollisionWithObject : MonoBehaviour
 
         if (other.gameObject.tag == "ColliderRoot")
         {
-            //spawnObjectRoot.SpawnObjectRootScene(other.gameObject);
+            //spawnObjectRoot.SpawnObjectRootScene();
         }
 
 

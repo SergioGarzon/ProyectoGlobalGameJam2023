@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class SpawnObjectRoot : MonoBehaviour
 {
-    /*
+    
     public GameObject player;
 
-    public GameObject root1;
-    public GameObject root2;
+    public ParticleSystem particle;
 
-    public void SpawnObjectRootScene(GameObject colliderObject)
+    public void SpawnObjectRootScene()
     {
-        if(player.transform.position.x > 573f)
+        StartCoroutine(ObstacleSpawn());
+    }
+    
+    IEnumerator ObstacleSpawn()
+    {
+        while (true)
         {
-            Instantiate(root2, new Vector3(player.transform.position.x, player.transform.position.y, 0f), Quaternion.identity);
-        }
+            Instantiate(particle, new Vector3(player.transform.position.x, player.transform.position.y, 0f), Quaternion.identity); 
 
-        if (player.transform.position.x < 573f)
-        {
-            Instantiate(root1, new Vector3(player.transform.position.x, player.transform.position.y, 0f), Quaternion.identity);
+            yield return new WaitForSeconds(0.2f);
+
+            Destroy(gameObject, 0.2f);
         }
 
     }
-    */
+
 
 }

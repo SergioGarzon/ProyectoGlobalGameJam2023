@@ -2919,6 +2919,7 @@ GameObject:
   - component: {fileID: 1621153662}
   - component: {fileID: 1621153663}
   - component: {fileID: 1621153664}
+  - component: {fileID: 1621153665}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -2998,6 +2999,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInstantiate: {fileID: 1628364004997715879, guid: 3e767618108930a4b88c3afdcc6404be, type: 3}
   circleRootPlayer: {fileID: 5999976835327180244, guid: 1dfe18d6a717bd642a5bf12245f57b42, type: 3}
+--- !u!114 &1621153665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621153659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569538e565eafe94c8345897988b710f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5999976835327180244, guid: 1dfe18d6a717bd642a5bf12245f57b42, type: 3}
+  particle: {fileID: 764437225488511418, guid: eab2a5622290cad4e8eb42d439ab8429, type: 3}
 --- !u!1 &1702176428
 GameObject:
   m_ObjectHideFlags: 0
