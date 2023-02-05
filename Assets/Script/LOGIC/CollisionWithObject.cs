@@ -13,6 +13,9 @@ public class CollisionWithObject : MonoBehaviour
 
     private SpawnObjectRoot spawnObjectRoot;
 
+    private OpenScene openSceneGame;
+
+
     private void Start()
     {
         //pnlWin = gameObject.GetComponent<OpenPanel>();
@@ -22,6 +25,8 @@ public class CollisionWithObject : MonoBehaviour
         sldLife = objectLogic.GetComponent<SliderLife>();
 
         spawnObjectRoot = objectLogic.GetComponent<SpawnObjectRoot>();
+
+        openSceneGame = objectLogic.GetComponent<OpenScene>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -29,7 +34,7 @@ public class CollisionWithObject : MonoBehaviour
         if (other.gameObject.tag == "waterWall")
         {
             Time.timeScale = 0;
-            //pnlWin.OpenPanelGame();
+            openSceneGame.OpenSceneGame("FinalVideo");
         }
 
         if (other.gameObject.tag == "Object1")
