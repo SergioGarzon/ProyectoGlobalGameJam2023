@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class SoundLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource audio;
+
+    private void Start()
     {
-        
+        float cantidad = PlayerPrefs.GetFloat("ValorSlider", 0);
+
+        audio.volume = cantidad;
+
+        AudioStart();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AudioStart()
     {
-        
+        audio.Play();
+    }
+
+    public void StopAudio()
+    {
+        audio.Stop();
     }
 }

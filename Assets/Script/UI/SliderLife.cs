@@ -15,7 +15,7 @@ public class SliderLife : MonoBehaviour
     private void Start()
     {
         sldLife.value = lifeData.life;
-        txtLife.text = lifeData.life + "%";
+        txtLife.text = lifeData.life + "";
 
         ColorSlider();
     }
@@ -35,7 +35,7 @@ public class SliderLife : MonoBehaviour
         }
 
         sldLife.value = lifeData.life;
-        txtLife.text = lifeData.life + "%";
+        txtLife.text = lifeData.life + "";
     }
 
     public void ColorSlider()

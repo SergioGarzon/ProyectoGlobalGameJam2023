@@ -15,6 +15,8 @@ public class CollisionWithObject : MonoBehaviour
 
     private OpenScene openSceneGame;
 
+    private SoundGamePlay soundGamePlay;
+
 
     private void Start()
     {
@@ -27,6 +29,8 @@ public class CollisionWithObject : MonoBehaviour
         spawnObjectRoot = objectLogic.GetComponent<SpawnObjectRoot>();
 
         openSceneGame = objectLogic.GetComponent<OpenScene>();
+
+        soundGamePlay = objectLogic.GetComponent<SoundGamePlay>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -72,9 +76,9 @@ public class CollisionWithObject : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "ColliderRoot")
+        if (other.gameObject.tag == "WaterSound")
         {
-            //spawnObjectRoot.SpawnObjectRootScene();
+            soundGamePlay.StartSoundWater();
         }
 
 
