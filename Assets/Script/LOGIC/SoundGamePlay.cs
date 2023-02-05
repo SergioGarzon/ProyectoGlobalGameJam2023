@@ -28,6 +28,9 @@ public class SoundGamePlay : MonoBehaviour
         audio1.Play();
         audio2.Play();
         audio3.Play();
+
+        audio4.Stop();
+        audio5.Stop();
     }
 
     public void StartSoundWater()
@@ -42,6 +45,8 @@ public class SoundGamePlay : MonoBehaviour
 
     public void StartAudioGameOver()
     {
+        Debug.Log("Entra aca");
+
         audio1.Stop();
         audio2.Stop();
         audio3.Stop();

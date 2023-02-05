@@ -3553,6 +3553,7 @@ GameObject:
   - component: {fileID: 1621153668}
   - component: {fileID: 1621153669}
   - component: {fileID: 1621153670}
+  - component: {fileID: 1621153671}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -3713,6 +3714,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: {fileID: 11400000, guid: 77b739f0738197d469f4a935bf7cd4b6, type: 2}
+--- !u!114 &1621153671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621153659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827ac7f3169e9c64ea7db3b1318f197a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!1 &1702176428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,10 +4203,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7b4e18691cea27a4ea4b9fbc15f74738, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

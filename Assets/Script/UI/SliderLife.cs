@@ -20,6 +20,8 @@ public class SliderLife : MonoBehaviour
 
         openPanel = gameObject.GetComponent<OpenPanel>();
 
+        soundPlayGame = gameObject.GetComponent<SoundGamePlay>();
+
         ColorSlider();
     }
 
