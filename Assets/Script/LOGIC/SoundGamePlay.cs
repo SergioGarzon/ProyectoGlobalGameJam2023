@@ -8,6 +8,7 @@ public class SoundGamePlay : MonoBehaviour
     public AudioSource audio2;
     public AudioSource audio3;
     public AudioSource audio4;
+    public AudioSource audio5;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class SoundGamePlay : MonoBehaviour
         audio2.volume = cantidad;
         audio3.volume = cantidad;
         audio4.volume = cantidad;
+        audio5.volume = cantidad;
 
         IniciarAudio();
     }
@@ -36,5 +38,15 @@ public class SoundGamePlay : MonoBehaviour
         
 
         audio4.Play();
+    }
+
+    public void StartAudioGameOver()
+    {
+        audio1.Stop();
+        audio2.Stop();
+        audio3.Stop();
+        audio4.Stop();
+
+        audio5.Play();
     }
 }

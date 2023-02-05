@@ -23,6 +23,7 @@ public class OpenPanel : MonoBehaviour
         panel1.SetActive(true);
         panel2.SetActive(false);
         panel3.SetActive(false);
+
     }
 
     public void returnGamePanel() {

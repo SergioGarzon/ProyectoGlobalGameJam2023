@@ -5,31 +5,21 @@ using UnityEngine.UI;
 
 public class TimerGamePlay : MonoBehaviour
 {
-    [SerializeField]
-    private int minutes;
 
-    [SerializeField]
-    private int second;
+    private int counterLife;
 
-    [SerializeField]
-    private Text txtTimeData;
-
-    //private GameController gameController;
-
-    private int min, sec;
+    private SliderLife sldLife;
 
 
     private void Start()
     {
-        //gameController = gameObject.GetComponent<GameController>();
+        sldLife = gameObject.GetComponent<SliderLife>();
     }
 
     public void StartTimer()
     {
-        min = minutes;
-        sec = second;
+        counterLife = -2;
 
-        writeTimer(min, sec);
         Invoke("updateTimer", 1f);
     }
 
@@ -40,35 +30,10 @@ public class TimerGamePlay : MonoBehaviour
 
     private void updateTimer()
     {
-        sec--;
-
-        if (sec < 0)
-        {
-            if (min == 0)
-            {
-                //gameController.disabledPanel();
-            }
-            else
-            {
-                min--;
-                sec = 59;
-            }
-        }
-
-        writeTimer(min, sec);
+        
+        sldLife.updateLife(counterLife);
+        sldLife.ColorSlider();
         Invoke("updateTimer", 1f);
     }
-
-
-    private void writeTimer(int minute, int seg)
-    {
-        if (seg < 10)
-        {
-            txtTimeData.text = minute.ToString() + ":0" + seg.ToString();
-        }
-        else
-        {
-            txtTimeData.text = minute.ToString() + ":" + seg.ToString();
-        }
-    }
+    
 }

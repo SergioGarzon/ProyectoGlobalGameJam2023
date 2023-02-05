@@ -33,7 +33,7 @@ public class CollisionWithObject : MonoBehaviour
         soundGamePlay = objectLogic.GetComponent<SoundGamePlay>();
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "waterWall")
         {
@@ -43,35 +43,35 @@ public class CollisionWithObject : MonoBehaviour
 
         if (other.gameObject.tag == "Object1")
         {
-            sldLife.updateLife(10);
+            sldLife.updateLife(5);
             sldLife.ColorSlider();
-            Destroy(other.gameObject);
+            Destroy(other.gameObject);            
         }
 
         if (other.gameObject.tag == "Object2")
         {
-            sldLife.updateLife(20);
+            sldLife.updateLife(10);
             sldLife.ColorSlider();
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Object3")
         {
-            sldLife.updateLife(30);
+            sldLife.updateLife(15);
             sldLife.ColorSlider();
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Object4")
         {
-            sldLife.updateLife(-20);
+            sldLife.updateLife(-10);
             sldLife.ColorSlider();
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Object5")
         {
-            sldLife.updateLife(-50);
+            sldLife.updateLife(-15);
             sldLife.ColorSlider();
             Destroy(other.gameObject);
         }
